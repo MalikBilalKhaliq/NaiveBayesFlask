@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Naive Bayes Classification Using Gaussian and bernoulli distribution Iris dataset</title>
+    <link href='https://fonts.googleapis.com/css?fam  ily=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    {#    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">#}
+
+    <!-- Latest compiled and minified CSS -->
+    {#    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">#}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+        integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!---Pasted Header Code-->
+    <!--[CSS/JS Files - Start]-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.apidelv.com/libs/awesome-functions/awesome-functions.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="./static/js/form.js"></script>
+    <style>
+        input {
+            width: 200%;
+            margin-bottom: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border: none;
+            outline: none;
+            padding: 200px;
+            font-size: 40px;
+            color: #fff;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(0, 0, 0, 0.3);
+            border-radius: 4px;
+            box-shadow: inset 0 -5px 45px rgba(100, 100, 100, 0.2), 0 1px 1px rgba(255, 255, 255, 0.2);
+            -webkit-transition: box-shadow .5s ease;
+            -moz-transition: box-shadow .5s ease;
+            -o-transition: box-shadow .5s ease;
+            -ms-transition: box-shadow .5s ease;
+            transition: box-shadow .5s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container_content" id="container_content">
+        <div class="container" style="font-size:150%;">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Machine Learning Basics: Naive Bayes Classification</h1>
+                    <form method="POST" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="select-Method">Choose a Method:</label>
+                            <select name="Method" id="select-Method" action="/post_form">
+                                <option value="">--Please choose an option--</option>
+                                <option value="Bernoulli"> Bernoulli models</option>
+                                <option value="Gaussian">Gaussian Naive Bayes </option>
+
+                            </select>
+                            <br><br>
+                            <button id="start_classification_btn" class="btn btn-primary">Sumit</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col-md-6">
+
+                    <h2>Result Text Will Display Below</h2>
+                    <div id="successAlert_converter" class="alert alert-success" role="alert" style="display:none;">
+                    </div>
+                    <div id="errorAlert_converter" class="alert alert-danger" role="alert" style="display:none;"></div>
+                    <div id="ClassificationResult"></div>
+
+
+                </div>
+                <div class="col-md-6">
+                    <img id="imgMain" src="#" />
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
